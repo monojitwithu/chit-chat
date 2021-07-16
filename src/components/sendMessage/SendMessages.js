@@ -4,7 +4,7 @@ import {Input,Button} from "@material-ui/core"
 import firebase from "firebase"
 
 
-const SendMessage=()=>{
+const SendMessage=({scroll})=>{
     const [message,setMessage]=useState("")
 
 
@@ -19,18 +19,22 @@ const SendMessage=()=>{
         await  db.collection("messages").add({
             text:message,
             photoURL,
+            uid,
             createdAt:firebase.firestore.FieldValue.serverTimestamp()
 
         })
         setMessage('')
+        scroll.current.scrollIntoView({ behavior: 'smooth' })
     }
 
 
     return(
         <div>
             <form onSubmit={sendMessage}>
+                <div className="sendMsg">
                 <Input  placeholder="Message" value={message} onChange={inputHandler}/>
                 <Button type="submit">Send</Button>
+                </div>
 
 
                 </form>

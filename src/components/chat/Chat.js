@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import SignOut from "../signOut/SignOut"
-import {db} from '../fireBase/firebase.js'
+import {auth, db} from '../fireBase/firebase.js'
 import SendMessage from "../sendMessage/SendMessages"
 
 
 const Chat=()=>{
     const [messages,setMessages]=useState([])
+    const scroll=useRef()
 
     useEffect(() => {
+        
         db.collection('messages').orderBy('createdAt').limit(50).onSnapshot(snapshot => {
             setMessages(snapshot.docs.map(doc => doc.data()))
         })
@@ -16,8 +18,9 @@ const Chat=()=>{
     return(
         <div>
            <SignOut/>
-           {messages.map(({id,text,photoURL})=>(  //id,text,photoURL automatically created by google firebase
-               <div key={id}>
+           <div className="msgs">
+           {messages.map(({id,text,photoURL,uid})=>(  //id,text,photoURL automatically created by google firebase
+               <div key={id}  className={`msg ${uid === auth.currentUser.uid? 'sent' : 'received'}`}>
                    <img  src={photoURL} alt=""/> 
                    <p>{text}</p>
 
@@ -25,7 +28,10 @@ const Chat=()=>{
 
                    </div>
            ))}
-           <SendMessage/>
+
+          </div>
+           <SendMessage scroll={scroll}/>
+           <div ref={scroll}></div>
 
 
 

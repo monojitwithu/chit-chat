@@ -1,0 +1,19 @@
+.sign-out{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background-color: #FAFAFA;
+    top: 0;
+    border-bottom: solid 1px lightgray;
+    z-index: 10;
+    button{
+        padding: 20px;
+        font-size: 15px;
+        border-radius: 0;
+        font-weight: 600;
+        
+    }
+
+}
