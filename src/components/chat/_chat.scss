@@ -1,108 +1,105 @@
+.msg {
+  display: flex;
+  padding: 20px 10px 0 20px;
+  margin: 20px;
+  border-radius: 3000px;
+  box-shadow: 0 0 10px rgb(164, 164, 164);
+  align-items: center;
 
-  
-  .msg {
-    display: flex;
-    padding: 20px 10px 0 20px;
-    margin: 20px;
-    border-radius: 3000px;
-    box-shadow: 0 0 10px rgb(164, 164, 164);
-    align-items: center;
-
-    img {
-        border-radius: 50%;
-        height: 45px;
-        margin-top: -20px;
-        border: 2px solid black;
-      }
-      
-      p {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-weight: 500;
-        font-size: 25px;
-        margin-top: 10px;
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-bottom: 10px;
-        overflow-wrap: break-word;
-      }
+  img {
+    border-radius: 50%;
+    height: 45px;
+    margin-top: -20px;
+    border: 2px solid black;
   }
-  
+
+  p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    overflow-wrap: break-word;
+  }
+}
+
+.sent {
+  font-family: "Times New Roman", Times, serif;
+  background-color: #51c4d3;
+  color: black;
+  border-top-right-radius: 1000px;
+  flex-direction: row-reverse;
+  padding: 20px 20px 0 10px;
+  text-align: end;
+  float: right;
+  box-shadow: 1px 1px 11px -1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 1px 11px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 1px 11px -1px rgba(0, 0, 0, 0.75);
+}
+
+.received {
+  background-color: #eeeeee;
+  border-top-left-radius: 1000px;
+  float: left;
+  box-shadow: 1px 1px 11px -1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 1px 11px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 1px 11px -1px rgba(0, 0, 0, 0.75);
+}
+
+.sendMsg {
+  justify-content: center;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  bottom: 0;
+  z-index: 1;
+
+  margin-left: -5px;
+  padding: 10px;
+  padding-bottom: 30px;
+  background-color: #67859b;
+  box-shadow: 1px 1px 11px -1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 1px 11px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 1px 11px -1px rgba(0, 0, 0, 0.75);
+}
+
+.msgs {
+  margin: 110px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 775px) {
+  p {
+    font-size: 20px;
+  }
   .sent {
-      font-family: 'Times New Roman', Times, serif;
-    background-color: #51C4D3;
-    color: black;
-    border-top-right-radius: 1000px;
-    flex-direction: row-reverse;
-    padding: 20px 20px 0 10px;
-    text-align: end;
-    float: right;
-    box-shadow: 1px 1px 11px -1px rgba(0,0,0,0.75);
--webkit-box-shadow: 1px 1px 11px -1px rgba(0,0,0,0.75);
--moz-box-shadow: 1px 1px 11px -1px rgba(0,0,0,0.75);
+    padding: 10px 10px 0 10px;
   }
-  
   .received {
-    
-    background-color: #EEEEEE;
-    border-top-left-radius: 1000px;
-    float: left;
-    box-shadow: 1px 1px 11px -1px rgba(0,0,0,0.75);
--webkit-box-shadow: 1px 1px 11px -1px rgba(0,0,0,0.75);
--moz-box-shadow: 1px 1px 11px -1px rgba(0,0,0,0.75);
+    padding: 10px 10px 0 10px;
   }
-  
-  .sendMsg {
-      justify-content: center;
-    position: fixed;
-    display: flex;
-    width: 100%;
-    bottom: 0;
-    z-index: 1;
-    
-    margin-left: -5px;
-    padding: 10px;
-    padding-bottom: 30px;
-    background-color: #67859b;
-    box-shadow: 1px 1px 11px -1px rgba(0,0,0,0.75);
--webkit-box-shadow: 1px 1px 11px -1px rgba(0,0,0,0.75);
--moz-box-shadow: 1px 1px 11px -1px rgba(0,0,0,0.75);
+  img {
+    height: 35px;
+    margin-top: -10px;
   }
-  
-  .msgs {
-    margin: 110px 0;
-    display: flex;
-    flex-direction: column;
+}
+
+@media (max-width: 500px) {
+  p {
+    font-size: 15px;
   }
-  
-  
-  @media (max-width: 775px) {
-    p {
-      font-size: 20px;
-    }
-    .sent {
-      padding: 10px 10px 0 10px;
-    }
-    .received {
-      padding: 10px 10px 0 10px;
-    }
-    img {
-      height: 35px;
-      margin-top: -10px;
-    }
+  .sent {
+    padding: 7px 7px 0 7px;
   }
-  
-  @media (max-width: 500px) {
-    p {
-      font-size: 15px;
-    }
-    .sent {
-      padding: 7px 7px 0 7px;
-    }
-    .received {
-      padding: 7px 7px 0 7px;
-    }
-    img {
-      height: 30px;
-      margin-top: -7px;
-    }
+  .received {
+    padding: 7px 7px 0 7px;
   }
+  img {
+    height: 30px;
+    margin-top: -7px;
+  }
+}
