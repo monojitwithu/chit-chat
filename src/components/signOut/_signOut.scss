@@ -1,23 +1,20 @@
-.sign-out{
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    background-color: #39A2DB;
-    top: 0;
-    
-    z-index: 10;
-    box-shadow: 1px 1px 11px -1px rgba(0,0,0,0.75);
--webkit-box-shadow: 1px 1px 11px -1px rgba(0,0,0,0.75);
--moz-box-shadow: 1px 1px 11px -1px rgba(0,0,0,0.75);
-    button{
-        padding: 20px;
-        font-size: 15px;
-        border-radius: 0;
-        font-weight: 600;
-        
-    }
+.sign-out {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  background-color: #39a2db;
+  top: 0;
 
+  z-index: 10;
+  box-shadow: 1px 1px 11px -1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 1px 11px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 1px 11px -1px rgba(0, 0, 0, 0.75);
+  button {
+    padding: 20px;
+    font-size: 15px;
+    border-radius: 0;
+    font-weight: 600;
+  }
 }

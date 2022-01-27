@@ -1,14 +1,11 @@
-@import '../components/signIn/signIn';
-@import '../components/signOut/signOut';
-@import '../components/sendMessage/sendMessages';
-@import '../components/chat/chat';
+@import "../components/signIn/signIn";
+@import "../components/signOut/signOut";
+@import "../components/sendMessage/sendMessages";
+@import "../components/chat/chat";
 @import url("https://kit.fontawesome.com/64d58efce2.js");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
-body{
-  background-image: url('../components/img/ranger-4df6c1b6.png');
+body {
+  background-image: url("../components/img/ranger-4df6c1b6.png");
   background-size: cover;
-  
 }
-
-
